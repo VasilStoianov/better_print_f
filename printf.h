@@ -8,9 +8,6 @@ void print_f(char *str, ...) {
   va_list args;
 
   va_start(args, str);
-  int index = 1;
-  int number = 0;
-
   for (int x = 0; str[x] != '\0'; x++) {
 
     if (str[x] == '%') {
@@ -33,7 +30,7 @@ void print_f(char *str, ...) {
         break;
       }
       case 'd': {
-        number = va_arg(args, int);
+       int number = va_arg(args, int);
         int back = 0;
         int multiplyer = 1;
         while (number) {
