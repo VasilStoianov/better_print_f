@@ -10,7 +10,6 @@ void print_f(char *str, ...) {
   va_start(args, str);
   int index = 1;
   int number = 0;
-  char *result = malloc(sizeof(str) + sizeof(args));
 
   for (int x = 0; str[x] != '\0'; x++) {
 
